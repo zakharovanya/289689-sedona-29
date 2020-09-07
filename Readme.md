@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Anna Zakharova](https://up.htmlacademy.ru/htmlcss/29/user/289689).
-* Наставник: `Неизвестно`.
+* Наставник: `[Андрей Островский](https://htmlacademy.ru/profile/grandmaus)`.
 
 ---
 
