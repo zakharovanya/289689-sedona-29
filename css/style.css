@@ -4,13 +4,20 @@
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('PT Sans'), local('PTSans'), url('../fonts/ptsans.woff2') format ('woff2'), url('../fonts/ptsans.woff') format ('woff');
+  src: local('PT Sans'), 
+    local('PTSans'), 
+    url('../fonts/ptsans.woff2') format ('woff2'), 
+    url('../fonts/ptsans.woff') format ('woff');
 }
+
 @font-face {
-  font-family: 'PT Sans Bold';
+  font-family: 'PT Sans';
   font-style: normal;
   font-weight: 700;
-  src: local('PT Sans Bold'), local('PTSans-Bold'), url('../fonts/ptsansbold.woff2') format ('woff2'), url('../fonts/ptsansbold.woff') format ('woff');
+  src: local('PT Sans Bold'), 
+    local('PTSans-Bold'), 
+    url('../fonts/ptsansbold.woff2') format ('woff2'), 
+    url('../fonts/ptsansbold.woff') format ('woff');
 }
 
 /* Variables */
@@ -45,10 +52,9 @@
 html {
   background-color: var(--gray-extra-light-color);
 }
+
 body {
   min-width: 1200px;
-  margin: 0;
-  padding: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -57,14 +63,21 @@ body {
   text-transform: uppercase;
   color: var(--dark-color);
   background-color: var(--white-color);
-  box-shadow: var(--basic-shadow);
 }
+
 a {
   text-decoration: none;
 }
+
 img {
   max-width: 100%;
   height: auto;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /* Typografy*/
@@ -75,11 +88,13 @@ img {
   line-height: 21px;
   text-align: center;
 }
+
 .main-heading {
   color: var(--black-color);
 }
+
 .inverse-heading {
-  color: var(--white_color);
+  color: var(--white-color);
 }
 
 /* Buttons */
@@ -87,6 +102,7 @@ img {
 .button {
   border-width: 0;
 }
+
 .search-button, 
 .social-button {
   font-size: 21px;
@@ -94,10 +110,12 @@ img {
   background-color: var(--blue-color);
   color: var(--white-color);
 }
+
 .search-button:hover,
 .social-button:hover {
   background-color: var(--blue-hover-color);
 }
+
 .search-button:focus,
 .social-button:focus {
   background-color: var(--blue-focus-color);
@@ -112,18 +130,19 @@ img {
   font-weight: 700;
   background-color: var(--white-color);
 }
-.site-navigation {
-  list-style: none;
-}
+
 .site-navigation a {
   color: var(--black-color);
 }
+
 .site-navigation a:hover {
   color: var(--blue-color);
 }
+
 .site-navigation a:focus {
   color: var(--black-light-opacity:);
 }
+
 .site-navigation a.active {
   color: var(--brown-color);
 }
@@ -132,21 +151,23 @@ img {
 
 .advantages {
   text-align: center;
-  background-color: var(--white_color);
+  background-color: var(--white-color);
 }
+
 .advantages-list {
-  list-style: none;
-  background-color: var(--white_color);
+  background-color: var(--white-color);
 }
+
 .advantages-item {
   background-color: var(--gray-light-color);
 }
-.advantages-item > div {
+
+.advantages-item > .advantages-wrap {
   color: var(--white-color);
   background-color: var(--blue-color);
 }
+
 .advantages-inner-list {
-  list-style: none;
   background-color: var(--white-color);
   box-shadow: var(--block-shadow);
 }
@@ -157,25 +178,28 @@ img {
   background-color: var(--white-color);
   text-align: center;
 }
+
 .search-heading {
   font-size: 30px;
   line-height: 24px;
   color: var(--black-color);
 }
+
 .search-link {
   font-size: 21px;
   line-height: 26px;
   background-color: var(--brown-color);
   color: var(--white-color);
 }
+
 .search-link:hover {
   background-color: var(--brown-hover-color);
 }
+
 .search-link:focus {
   background-color: var(--brown-focus-color);
   color: var(--white-light-opacity);
 }
-
 
 /* Footer */
 
@@ -183,16 +207,15 @@ img {
   background-color: var(--white-basic-opacity);
   text-align: center;
 }
+
 .contacts > p, 
-.contacts >.contact-link {
+.contacts > .contact-link {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: var(--black-color);
 }
-.social-list {
-  list-style: none;
-}
+
 .developer p {
   font-style: normal;
 }
