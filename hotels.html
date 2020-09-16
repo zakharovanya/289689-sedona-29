@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+  <head class="page">
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
-    <header>
-      <nav>
-        <a href="/">
+  <body class="page-body">
+    <header class="main-header">
+      <nav class="main-navigation">
+        <a class="main-header-logo" href="/">
           <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="">
         </a>
-        <ul>
+        <ul class="site-navigation list-reset">
           <li>
             <a href="">Информация</a>
           </li>
@@ -28,111 +28,111 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="container">
       <form></form>
-      <div>
-        <p>Найдено: <span>3</span> шт.</p>
-        <div>
-          <p>Сортировать по:</p>
-          <a href="">Цене</a>
-          <a href="">Типу</a>
-          <a href="">Рейтингу</a>
+      <div class="sorting-block">
+        <p class="sort-heading">Найдено: <span>3</span> шт.</p>
+        <div class="sorting-block">
+          <p class="sort-text">Сортировать по:</p>
+          <a class="sort-link" href="">Цене</a>
+          <a class="sort-link" href="">Типу</a>
+          <a class="sort-link" href="">Рейтингу</a>
           <!-- взорастание/убывание -->
-          <div>
-            <a href=""></a>
-            <a href=""></a>
+          <div class="sort-inner">
+            <a class="sort-up" href=""></a>
+            <a class="sort-down" href=""></a>
           </div>
         </div>
       </div>
-      <ul>
-        <li>
+      <ul class="hotels-list list-reset">
+        <li class="hotels-item">
           <a href="">
             <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="">
           </a>
-          <h2>
+          <h2 class="hotels-heading">
             <a href="">Amara Resort & Spa</a>
           </h2>
-          <div>
-            <p>Гостиница</p>
-            <a href="">Подробнее</a>
+          <div class="hotels-info">
+            <p class="hotels-caption">Гостиница</p>
+            <a class="button detail-button" href="">Подробнее</a>
           </div>
-          <div>
-            <p>от <span>4000</span> р.</p>
-            <button type="button">Забронировать</button>
+          <div class="hotels-info">
+            <p class="hotels-caption">от <span>4000</span> р.</p>
+            <button class="button booking-button" type="button">Забронировать</button>
           </div>
-          <div>
+          <div class="hotels-rating">
             <span></span>
-            <p>Рейтинг: 8,5</p>
+            <p class="rating">Рейтинг: 8,5</p>
           </div>
         </li>
-        <li>
+        <li class="hotels-item">
           <a href="">
             <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="">
           </a>
-          <h2>
+          <h2 class="hotels-heading">
             <a href="">Desert Quail Inn</a>
           </h2>
-          <div>
-            <p>Мотель</p>
-            <a href="">Подробнее</a>
+          <div class="hotels-info">
+            <p class="hotels-caption">Мотель</p>
+            <a class="button detail-button" href="">Подробнее</a>
           </div>
-          <div>
-            <p>от <span>3000</span> р.</p>
-            <button type="button">Забронировать</button>
+          <div class="hotels-info">
+            <p class="hotels-caption">от <span>3000</span> р.</p>
+            <button class="button booking-button" type="button">Забронировать</button>
           </div>
-          <div>
+          <div class="hotels-rating">
             <span></span>
-            <p>Рейтинг: 8,9</p>
+            <p class="rating">Рейтинг: 8,9</p>
           </div>
         </li>
-        <li>
+        <li class="hotels-item">
           <a href="">
             <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="">
           </a>
-          <h2>
+          <h2 class="hotels-heading">
             <a href="">Villas at Poco Diablo</a>
           </h2>
-          <div>
-            <p>Апартаменты</p>
-            <a href="">Подробнее</a>
+          <div class="hotels-info">
+            <p class="hotels-caption">Апартаменты</p>
+            <a class="button detail-button" href="">Подробнее</a>
           </div>
-          <div>
-            <p>от <span>2000</span> р.</p>
-            <button type="button">Забронировать</button>
+          <div class="hotels-info">
+            <p class="hotels-caption">от <span>2000</span> р.</p>
+            <button class="button booking-button" type="button">Забронировать</button>
           </div>
-          <div>
+          <div class="hotels-rating">
             <span></span>
-            <p>Рейтинг: 9,2</p>
+            <p class="rating">Рейтинг: 9,2</p>
           </div>
         </li>
       </ul>
     </main>
-    <footer>
-      <div>
-        <a href="">#visitSEDONA</a>
-        <p>тел: <a href="tel:+74956660166">+7(495) 666-01-66</a></p>
+    <footer class="page-footer">
+      <div class="contacts">
+        <a class="contact-link" href="">#visitSEDONA</a>
+        <p>тел: <a class="contact-link" href="tel:+74956660166">+7(495) 666-01-66</a></p>
       </div>
-      <ul>
-        <li>
-          <a href="">
+      <ul class="social-list list-reset">
+        <li class="social-item">
+          <a class="social-button" href="">
             <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="">
           </a>
         </li>
-        <li>
-          <a href="">
+        <li class="social-item">
+          <a class="social-button" href="">
             <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="">
           </a>
         </li>
-        <li>
-          <a href="">
+        <li class="social-item">
+          <a class="social-button" href="">
             <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="">
           </a>
         </li>
       </ul>
-      <address>
+      <address class="developer">
         <p>Website by</p>
-        <a href="https://htmlacademy.ru/intensive/htmlcss">
-            <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="">
+        <a class="developer-link" href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="">
         </a>
       </address>
     </footer>    
