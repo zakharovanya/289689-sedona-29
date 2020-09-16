@@ -1,0 +1,221 @@
+/* Fonts */
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), 
+    local('PTSans'), 
+    url('../fonts/ptsans.woff2') format ('woff2'), 
+    url('../fonts/ptsans.woff') format ('woff');
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Bold'), 
+    local('PTSans-Bold'), 
+    url('../fonts/ptsansbold.woff2') format ('woff2'), 
+    url('../fonts/ptsansbold.woff') format ('woff');
+}
+
+/* Variables */
+
+:root {
+  --black-color:#000000;
+  --dark-color:#333333;
+  --black-light-opacity:rgba(0, 0, 0, 0.3);
+  --gray-extra-dark-color:#6A6A6A;
+  --gray-dark-color:#666666;
+  --gray-color:#A9A9A9;
+  --gray-light-color: #EEEEEE;
+  --gray-middle-light:#EBEBEB;
+  --gray-extra-light-color:#F2F2F2;
+  --gray-border-color:#E5E5E5;
+  --gray-sort-color:#CACACA;
+  --white-color:#FFFFFF;
+  --white-basic-opacity: rgba(255, 255, 255, 0.9);
+  --white-light-opacity: rgba(255, 255, 255, 0.3);
+  --blue-color:#81B3D2;
+  --blue-hover-color:#669EC0;
+  --blue-focus-color:#5496BD;
+  --brown-color:#766357;
+  --brown-hover-color:#604E43;
+  --brown-focus-color:#503E33;
+  --basic-shadow: box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  --block-shadow: box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+}
+
+/* Global */
+
+html {
+  background-color: var(--gray-extra-light-color);
+}
+
+body {
+  min-width: 1200px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: var(--dark-color);
+  background-color: var(--white-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Typografy*/
+
+.main-heading,
+.inverse-heading {
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.main-heading {
+  color: var(--black-color);
+}
+
+.inverse-heading {
+  color: var(--white-color);
+}
+
+/* Buttons */
+
+.button {
+  border-width: 0;
+}
+
+.search-button, 
+.social-button {
+  font-size: 21px;
+  line-height: 27px;
+  background-color: var(--blue-color);
+  color: var(--white-color);
+}
+
+.search-button:hover,
+.social-button:hover {
+  background-color: var(--blue-hover-color);
+}
+
+.search-button:focus,
+.social-button:focus {
+  background-color: var(--blue-focus-color);
+  color: var(--white-light-opacity);
+}
+
+/* Navigation */
+
+.main-navigation {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  background-color: var(--white-color);
+}
+
+.site-navigation a {
+  color: var(--black-color);
+}
+
+.site-navigation a:hover {
+  color: var(--blue-color);
+}
+
+.site-navigation a:focus {
+  color: var(--black-light-opacity:);
+}
+
+.site-navigation a.active {
+  color: var(--brown-color);
+}
+
+/* Advantages */
+
+.advantages {
+  text-align: center;
+  background-color: var(--white-color);
+}
+
+.advantages-list {
+  background-color: var(--white-color);
+}
+
+.advantages-item {
+  background-color: var(--gray-light-color);
+}
+
+.advantages-item > .advantages-wrap {
+  color: var(--white-color);
+  background-color: var(--blue-color);
+}
+
+.advantages-inner-list {
+  background-color: var(--white-color);
+  box-shadow: var(--block-shadow);
+}
+
+/* Search */
+
+.search-section {
+  background-color: var(--white-color);
+  text-align: center;
+}
+
+.search-heading {
+  font-size: 30px;
+  line-height: 24px;
+  color: var(--black-color);
+}
+
+.search-link {
+  font-size: 21px;
+  line-height: 26px;
+  background-color: var(--brown-color);
+  color: var(--white-color);
+}
+
+.search-link:hover {
+  background-color: var(--brown-hover-color);
+}
+
+.search-link:focus {
+  background-color: var(--brown-focus-color);
+  color: var(--white-light-opacity);
+}
+
+/* Footer */
+
+.page-footer {
+  background-color: var(--white-basic-opacity);
+  text-align: center;
+}
+
+.contacts > p, 
+.contacts > .contact-link {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--black-color);
+}
+
+.developer p {
+  font-style: normal;
+}
