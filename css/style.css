@@ -133,7 +133,8 @@ img {
   text-transform: uppercase;
   color: var(--white-color);
 }
-.detail-button{
+
+.detail-button {
   background-color: var(--blue-color);
 } 
 
@@ -273,20 +274,16 @@ img {
   border-bottom: 1px dashed transparent;
 }
 
-.sort-up,
-.sort-down {
+.sort-arrow {
   color: var(--gray-sort-color);
 }
 
-.sort-up.active,
-.sort-down.active,
-.sort-up:focus,
-.sort-down:focus {
+.sort-arrow.active,
+.sort-arrow:focus {
   color: var(--blue-color);
 }
 
-.sort-up:hover,
-.sort-down:hover {
+.sort-arrow:hover {
   color: var(--black-color);
 }
 
