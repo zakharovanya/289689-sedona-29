@@ -170,7 +170,7 @@ img {
 }
 
 .site-navigation a:focus {
-  color: var(--black-light-opacity:);
+  color: var(--black-light-opacity);
 }
 
 .site-navigation a.active {
