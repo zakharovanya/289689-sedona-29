@@ -9,7 +9,7 @@
   <body class="page-body">
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-header-logo" href="/">
+        <a class="main-header-logo m-auto" href="/">
           <img src="img/logo.svg" width="138" height="70" alt="Седона">
         </a>
         <ul class="site-navigation list-reset">
@@ -19,6 +19,7 @@
           <li>
             <a href="">Фото и видео</a>
           </li>
+          <li></li>
           <li>
             <a href="">Карта штата</a>
           </li>
@@ -30,17 +31,17 @@
     </header>
     <main class="container">
       <div class="banner">
-        <img src="img/background.jpg" width="1200" height="509" alt="Природа города Седона">
-        <img src="img/welcome.svg" width="456" height="350" alt="Добро пожаловать в Седону">
+        <img class="background-banner" src="img/background.jpg" width="1200" height="509" alt="Природа города Седона">
+        <img class="welcome-banner" src="img/welcome.svg" width="456" height="350" alt="Добро пожаловать в Седону">
         <svg width="1200" height="57" viewBox="0 0 1200 57" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 57V0L250 24V0L600 57L950 0V24L1200 0V57H0Z" fill="white"/>
         </svg>
       </div>
       <section class="advantages">        
-        <h1 class="main-heading">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+        <h1 class="page-heading">Седона — небольшой городок в Аризоне,<br/> заслуживающий большего!</h1>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>      
         <ul class="advantages-list list-reset">
-          <li class="advantages-item">
+          <li class="advantages-item advantages-grid-pic-1">
             <div class="advantages-wrap">
               <h2 class="inverse-heading">Настоящий городок</h2>
               <span>№1</span>
@@ -62,7 +63,7 @@
               </li>
             </ul>
           </li>
-          <li class="advantages-item">
+          <li class="advantages-item advantages-grid-pic-2">
             <img src="img/image-2.jpg" width="800" height="256" alt="Мост Дьвола">
             <div class="advantages-wrap">
               <h2 class="inverse-heading">Там есть Мост дьявола</h2>
@@ -88,21 +89,25 @@
         </ul>
       </section>
       <section class="search-section">
-        <h3 class="search-heading">Заинтересовались</h3>
-        <p>Заинтересовались? Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <div class="search-block"> 
-          <h4><a class="search-link" href="">Поиск гостиницы в Седоне</a></h4>
-          <button class="button search-button">Найти</button>
+        <div class="search-column">
+          <h3 class="search-heading">Заинтересовались</h3>
+          <p>Укажите предполагаемые даты поездки,<br/> и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          <div class="search-block"> 
+            <h4><a class="search-link full-width" href="">Поиск гостиницы в Седоне</a></h4>
+            <div class="form-block">
+              <button class="button search-button full-width">Найти</button>
+            </div>
+          </div>
         </div>
-        <img src="img/map.jpg" width="1199" height="594" alt="Карта города">
+        <img class="map-column" src="img/map.jpg" width="1199" height="594" alt="Карта города">
       </section>
     </main>    
-    <footer class="page-footer">
-      <div class="contacts">
+    <footer class="page-footer container">
+      <div class="contacts m-auto">
         <a class="contact-link" href="">#visitSEDONA</a>
         <p>тел: <a class="contact-link" href="tel:+74956660166">+7(495) 666-01-66</a></p>
       </div>
-      <ul class="social-list list-reset">
+      <ul class="social-list list-reset m-auto">
         <li class="social-item">
           <a class="social-button twitter-button" href=""></a>
         </li>
@@ -113,7 +118,7 @@
           <a class="social-button youtube-button" href=""></a>
         </li>
       </ul>
-      <address class="developer">
+      <address class="developer m-auto">
         <p>Website by</p>
         <a class="developer-link" href="https://htmlacademy.ru/intensive/htmlcss">
           <svg width="115" height="41" viewBox="0 0 115 41" fill="none" xmlns="http://www.w3.org/2000/svg">
