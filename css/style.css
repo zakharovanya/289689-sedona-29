@@ -73,11 +73,12 @@ img {
   height: auto;
 }
 
-.page-body h1,
-.page-body h2,
-.page-body h3,
-.page-body h4,
-.page-body p {
+.main-heading,
+.page-heading,
+.search-heading,
+.hotels-heading,
+.hotels-caption,
+.caption {
   margin: 0;
 } 
 
@@ -99,12 +100,35 @@ img {
 
 /* Grids */
 
-.container, 
-.main-header {
+.container {
   width: 1200px;
   margin: 0 auto;
   background-color: var(--white-color);
   box-shadow: var(--block-shadow);
+}
+
+.page-body {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.main-page {
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  z-index: 1;
+}
+
+.page-footer {
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  margin: auto auto 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.main-header {
+  background-color: var(--white-color);
+  z-index: 2;
 }
 
 .main-navigation {
@@ -187,7 +211,7 @@ img {
 
 .search-section {
   display: grid;
-  grid-template-rows: 256px auto;
+  grid-template-rows: 291px auto;
   min-height: 100vh;
 }
 
@@ -275,18 +299,18 @@ img {
 } 
 
 .booking-button,
-.search-link {
+.search-form-button {
   background-color: var(--brown-color);
   color: var(--white-color);
 }
 
 .booking-button:hover,
-.search-link:hover {
+.search-form-button:hover {
   background-color: var(--brown-hover-color);
 }
 
 .booking-button:focus,
-.search-link:focus {
+.search-form-button:focus {
   background-color: var(--brown-focus-color);
   color: var(--white-light-opacity);
 }
@@ -348,17 +372,21 @@ img {
 .search-section {
   background-color: var(--white-color);
   text-align: center;
-  padding-top: 54px;
 }
 
 .search-heading {
   font-size: 30px;
   line-height: 24px;
   color: var(--black-color);
+  padding-top: 58px;
   padding-bottom: 36px;
 }
 
-.search-link {
+.search-caption {
+  line-height: 24px;
+}
+
+.search-form-button {
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
@@ -369,7 +397,7 @@ img {
 .search-block {
   background-color: var(--white-color);
   box-shadow: var(--basic-shadow);
-  margin: 54px auto 0;
+  margin: 38px auto 0;
   max-width: 568px;
 }
 
