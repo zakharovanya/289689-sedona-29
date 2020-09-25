@@ -43,8 +43,8 @@
   --brown-color:#766357;
   --brown-hover-color:#604E43;
   --brown-focus-color:#503E33;
-  --basic-shadow: box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
-  --block-shadow: box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+  --basic-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  --block-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 /* Global */
@@ -62,7 +62,6 @@ body {
   line-height: 26px;
   text-transform: uppercase;
   color: var(--dark-color);
-  background-color: var(--white-color);
 }
 
 a {
@@ -74,10 +73,163 @@ img {
   height: auto;
 }
 
+.main-heading,
+.page-heading,
+.search-heading,
+.hotels-heading,
+.hotels-caption,
+.caption {
+  margin: 0;
+} 
+
 .list-reset {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.full-width {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.block-centering {
+  margin: auto;
+}
+
+/* Grids */
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: var(--white-color);
+  box-shadow: var(--block-shadow);
+}
+
+.page-body {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.main-page {
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  z-index: 1;
+}
+
+.page-footer {
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  margin: auto auto 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.main-header {
+  background-color: var(--white-color);
+  z-index: 2;
+}
+
+.main-navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 56px;
+}
+
+.site-navigation > li {
+  margin: auto;
+}
+
+.main-header-logo {
+  grid-column: 3 / 4;
+  grid-row: 1 / -1;
+  z-index: 1;
+}
+
+.site-navigation {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.advantages-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 256px 256px;
+  min-height: 100vh;
+}
+
+.advantages-grid-pic,
+.advantages-grid-pic-inverse {
+  display: grid;
+  grid-column: 1 / -1;
+  background-color: var(--blue-color);;
+}
+
+.advantages-grid-pic {
+  grid-template-columns: 400px auto;
+}
+
+.advantages-grid-pic-inverse {
+  grid-template-columns: auto 400px;
+}
+
+.advantages-inner-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column: 1 / -1;
+  min-height: 330px;
+}
+.advantages-item,
+.advantages-inner-item,
+.advantages-wrap {
+  margin: auto;
+}
+
+.advantages-item > p,
+.advantages-inner-item > p,
+.advantages-wrap > p {
+  padding: 25px 50px 0;
+  line-height: 21px;
+}
+
+.banner {
+  display: grid;
+}
+
+.background-banner,
+.welcome-banner {
+  grid-column: 1 / -1;
+  grid-row: 1 /-1;
+}
+
+.welcome-banner {
+  margin: auto;
+}
+
+.search-section {
+  display: grid;
+  grid-template-rows: 291px auto;
+  min-height: 100vh;
+}
+
+.search-column {
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+  z-index: 1;
+}
+
+.map-column {
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
+}
+
+.page-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 23px 0;
 }
 
 /* Typografy*/
@@ -87,9 +239,17 @@ img {
   font-size: 21px;
   line-height: 21px;
   text-align: center;
+  padding-bottom: 25px;
 }
 
-.main-heading {
+.page-heading {
+  font-size: 21px;
+  line-height: 26px;
+  padding-bottom: 42px;
+}
+
+.main-heading,
+.page-heading {
   color: var(--black-color);
 }
 
@@ -138,16 +298,19 @@ img {
   background-color: var(--blue-color);
 } 
 
-.booking-button {
+.booking-button,
+.search-form-button {
   background-color: var(--brown-color);
   color: var(--white-color);
 }
 
-.booking-button:hover {
+.booking-button:hover,
+.search-form-button:hover {
   background-color: var(--brown-hover-color);
 }
 
-.booking-button:focus {
+.booking-button:focus,
+.search-form-button:focus {
   background-color: var(--brown-focus-color);
   color: var(--white-light-opacity);
 }
@@ -161,19 +324,19 @@ img {
   background-color: var(--white-color);
 }
 
-.site-navigation a {
+.navigation-link {
   color: var(--black-color);
 }
 
-.site-navigation a:hover {
+.navigation-link:hover {
   color: var(--blue-color);
 }
 
-.site-navigation a:focus {
+.navigation-link:focus {
   color: var(--black-light-opacity);
 }
 
-.site-navigation a.active {
+.navigation-link.active {
   color: var(--brown-color);
 }
 
@@ -182,19 +345,21 @@ img {
 .advantages {
   text-align: center;
   background-color: var(--white-color);
+  padding-top: 42px;
 }
 
 .advantages-list {
-  background-color: var(--white-color);
+  background-color: var(--gray-light-color);
+  margin-top: 51px;
 }
 
 .advantages-item {
-  background-color: var(--gray-light-color);
+  /*background-color: var(--gray-light-color);*/
 }
 
 .advantages-item > .advantages-wrap {
   color: var(--white-color);
-  background-color: var(--blue-color);
+  /*background-color: var(--blue-color);*/
 }
 
 .advantages-inner-list {
@@ -213,22 +378,37 @@ img {
   font-size: 30px;
   line-height: 24px;
   color: var(--black-color);
+  padding-top: 58px;
+  padding-bottom: 36px;
 }
 
-.search-link {
+.search-caption {
+  line-height: 24px;
+}
+
+.search-form-button {
   font-size: 21px;
   line-height: 26px;
-  background-color: var(--brown-color);
-  color: var(--white-color);
+  text-transform: uppercase;
+  border: 0;
+  padding: 30px 0;
 }
 
-.search-link:hover {
-  background-color: var(--brown-hover-color);
+.search-block {
+  background-color: var(--white-color);
+  box-shadow: var(--basic-shadow);
+  margin: 38px auto 0;
+  max-width: 568px;
 }
 
-.search-link:focus {
-  background-color: var(--brown-focus-color);
-  color: var(--white-light-opacity);
+.search-button {
+  text-transform: uppercase;
+  padding: 16px 0;
+  display: block;
+}
+
+.form-block {
+  padding: 55px;
 }
 
 /* Sort */
@@ -293,18 +473,18 @@ img {
   border-bottom: 1px solid var(--gray-border-color);
 }
 
-.hotels-heading > a {
+.hotels-link {
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   color: var(--black-color);
 }
 
-.hotels-heading > a:hover {
+.hotels-link:hover {
   color: var(--blue-color);
 } 
 
-.hotels-heading > a:focus {
+.hotels-link:focus {
   color: var(--black-light-opacity);
 } 
 
@@ -330,8 +510,8 @@ img {
   text-align: center;
 }
 
-.contacts > p, 
-.contacts > .contact-link {
+.contact-text, 
+.contact-link {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
