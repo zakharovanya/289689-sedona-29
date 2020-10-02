@@ -140,8 +140,15 @@ img {
 
 .main-navigation {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 56px;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .site-navigation > li {
@@ -149,7 +156,7 @@ img {
 }
 
 .main-header-logo {
-  grid-column: 3 / 4;
+  grid-column: 1 / -1;
   grid-row: 1 / -1;
   z-index: 1;
 }
@@ -162,11 +169,11 @@ img {
   padding: 0 72px;
 }
 
-.navigation-item:nth-child(3n) {
-  grid-column: 3 / 4;
+.navigation-item {
+  text-align: left;
 }
 
-.navigation-item:nth-child(3n),
+.navigation-item:nth-of-type(4n-1),
 .navigation-item:nth-child(4n) {
   text-align: right;
 }
@@ -205,10 +212,6 @@ img {
 
 .advantages-inner-item {
   flex-basis: 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .advantages-inner-item:nth-child(2n) {
@@ -218,13 +221,6 @@ img {
 .advantages-item {
   margin: auto;
   min-height: 256px;
-}
-
-.advantages-wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .advantages-item > p,
@@ -323,7 +319,6 @@ img {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  height: 120px;
 }
 
 /* Typografy*/
@@ -423,6 +418,8 @@ img {
 
 .navigation-link {
   color: var(--black-color);
+  display: block;
+  padding: 15px 0;
 }
 
 .navigation-link:hover {
@@ -623,6 +620,11 @@ img {
 
 .contact-text {
   margin: 0;
+}
+
+.social-list {
+  padding-top: 36px;
+  padding-bottom: 36px;
 }
 
 .developer p {
