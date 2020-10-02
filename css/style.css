@@ -139,25 +139,13 @@ img {
 }
 
 .main-navigation {
-  display: grid;
   position: relative;
 }
 
-.logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-}
-
-.site-navigation > li {
-  margin: auto 0;
-}
-
 .main-header-logo {
-  grid-column: 1 / -1;
-  grid-row: 1 / -1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1;
 }
 
@@ -171,6 +159,7 @@ img {
 
 .navigation-item {
   text-align: left;
+  padding: 15px 0;
 }
 
 .navigation-item:nth-of-type(4n-1),
@@ -180,7 +169,6 @@ img {
 
 .advantages-list {
   min-height: 100vh;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -418,8 +406,6 @@ img {
 
 .navigation-link {
   color: var(--black-color);
-  display: block;
-  padding: 15px 0;
 }
 
 .navigation-link:hover {
