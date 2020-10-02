@@ -74,6 +74,7 @@ img {
 }
 
 .main-heading,
+.inverse-heading,
 .page-heading,
 .search-heading,
 .hotels-heading,
@@ -96,6 +97,12 @@ img {
 
 .block-centering {
   margin: auto;
+}
+
+.item-centering {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Grids */
@@ -132,18 +139,13 @@ img {
 }
 
 .main-navigation {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 56px;
-}
-
-.site-navigation > li {
-  margin: auto;
+  position: relative;
 }
 
 .main-header-logo {
-  grid-column: 3 / 4;
-  grid-row: 1 / -1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1;
 }
 
@@ -151,14 +153,25 @@ img {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 0 72px;
+}
+
+.navigation-item {
+  text-align: left;
+  padding: 15px 0;
+}
+
+.navigation-item:nth-of-type(4n-1),
+.navigation-item:nth-child(4n) {
+  text-align: right;
 }
 
 .advantages-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto 256px 256px;
   min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .advantages-grid-pic,
@@ -177,15 +190,25 @@ img {
 }
 
 .advantages-inner-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   grid-column: 1 / -1;
   min-height: 330px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
-.advantages-item,
-.advantages-inner-item,
-.advantages-wrap {
+
+.advantages-inner-item {
+  flex-basis: 30%;
+}
+
+.advantages-inner-item:nth-child(2n) {
+  padding: 0 36px;
+}
+
+.advantages-item {
   margin: auto;
+  min-height: 256px;
 }
 
 .advantages-item > p,
@@ -280,9 +303,10 @@ img {
 }
 
 .page-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  height: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /* Typografy*/
@@ -582,6 +606,11 @@ img {
 
 .contact-text {
   margin: 0;
+}
+
+.social-list {
+  padding-top: 36px;
+  padding-bottom: 36px;
 }
 
 .developer p {
