@@ -105,6 +105,24 @@ img {
   justify-content: center;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.content-indent {
+  padding-left: 73px;
+  padding-right: 73px;
+}
+
 /* Grids */
 
 .container {
@@ -154,7 +172,6 @@ img {
   grid-row: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 0 72px;
 }
 
 .navigation-item {
@@ -261,45 +278,53 @@ img {
 }
 
 .hotels-page {
-  padding: 0 73px;
   min-height: calc(100vh - 180px);
 }
 
-.hotels-list {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+.hotels-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  padding: 30px 0;
 }
 
-.hotels-item {
-  display: grid;
-  grid-template-columns: 135px 1fr auto;
-  padding: 30px 0;
-  height: 90px;
+.hotels-image-link {
+  display: flex;
 }
 
 .hotels-description {
-  display: grid;
-  grid-template-rows: 25px auto;
-  grid-template-columns: 116px auto;
+  /* display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: auto auto 1fr; */
   padding-left: 29px;
+  flex-grow: 1;
 }
 
 .hotels-heading {
   grid-column: 1 / -1;
 }
 
-.hotels-info {
+.hotels-text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.hotels-info
+{
+  margin-top: 2px;
+}
+
+.hotels-info:not(:last-child) {
   margin-right: 6px;
-  margin-top: 9px;
 }
 
 .hotels-caption {
-  padding-bottom: 8px;
+  margin-bottom: 15px;
 }
 
 .hotels-rating {
-  grid-template-rows: 1fr 1fr;
-  display: grid;
+  align-self: flex-end;
 }
 
 .page-footer {
@@ -583,6 +608,46 @@ img {
   background-color: var(--gray-extra-light-color);
   padding: 3px 15px;
   display: block;
+  margin: 0;
+}
+
+/* Filters */
+
+.hotels-filter {
+  background-image: url(../img/background-filter.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--black-color);
+  position: relative;
+  padding-top: 26px;
+  padding-bottom: 32px;
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.filter fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+  color: var(--white-color);
+}
+.filter fieldset:nth-child(3n+3) {
+  flex-basis: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter legend {
+  margin-bottom: 24px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  text-align: left;
 }
 
 /* Footer */
