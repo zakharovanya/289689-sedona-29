@@ -29,10 +29,7 @@
       </nav>
     </header>
     <main class="main-page">
-      <div class="banner">
-        <img class="background-banner" src="img/background.jpg" width="1200" height="509" alt="Природа города Седона">
-        <img class="welcome-banner" src="img/welcome.svg" width="456" height="350" alt="Добро пожаловать в Седону">        
-      </div>
+      <div class="banner"></div>
       <section class="advantages">        
         <h1 class="page-heading">Седона — небольшой городок в Аризоне,<br/> заслуживающий большего!</h1>
         <p class="caption">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>      
@@ -46,17 +43,17 @@
             <img src="img/image.jpg" width="800" height="256" alt="Город Седона">
             <ul class="advantages-inner-list list-reset">
               <li class="advantages-inner-item">
-                <div class="home-icon"></div>
+                <div class="advantages-icon home-icon"></div>
                 <h3 class="main-heading">Жилье</h3>
                 <p class="caption">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
               <li class="advantages-inner-item">
-                <div class="food-icon"></div>
+                <div class="advantages-icon food-icon"></div>
                 <h3 class="main-heading">Еда</h3>
                 <p class="caption">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
               <li class="advantages-inner-item">
-                <div class="souvenirs-icon"></div>
+                <div class="advantages-icon souvenirs-icon"></div>
                 <h3 class="main-heading">Сувениры</h3>
                 <p class="caption">Не только китайского, но и местного производства!</p>
               </li>
@@ -94,31 +91,37 @@
           <div class="search-block"> 
             <button class="search-form-button full-width">Поиск гостиницы в Седоне</button>
             <div class="form-block">
-              <form class="search-form">
-                <fieldset>
-                  <ul class="list-reset search-list">
-                    <li class="search-option search-date">
-                      <label for="search-arrival">Дата заезда:</label>
-                      <input class="search-input-date search-input" type="text" name="arrival" id="search-arrival" placeholder="24 апреля 2017">
-                      <div class="calendar"></div>                      
-                    </li>
-                    <li class="search-option search-date">
-                      <label for="search-depature">Дата выезда:</label>
-                      <input class="search-input-date search-input" type="text" name="depature" id="search-depature" placeholder="4 июля 2017">                      
-                      <div class="calendar"></div>   
-                    </li>
-                    <li class="search-option search-number">
-                      <label for="search-adults">Взрослые:</label>
-                      <input class="search-input-number search-input" type="number" name="adults" id="search-adults" value="2" min="1">                      
-                    </li>
-                    <li class="search-option search-number">
-                      <label for="search-children">Дети:</label>
+              <form id="searching-form"class="search-form">
+                <ul class="list-reset search-list">
+                  <li class="search-option search-date">
+                    <label for="search-arrival">Дата заезда:</label>
+                    <input class="search-input-date search-input" type="text" name="arrival" id="search-arrival" placeholder="24 апреля 2017">
+                    <button type="button" class="calendar button-reset"></button>                      
+                  </li>
+                  <li class="search-option search-date">
+                    <label for="search-depature">Дата выезда:</label>
+                    <input class="search-input-date search-input" type="text" name="depature" id="search-depature" placeholder="4 июля 2017">                      
+                    <button type="button" class="calendar button-reset"></button>   
+                  </li>
+                  <li class="search-option search-number">
+                    <label for="search-adults">Взрослые:</label>
+                    <div class="number-wrapper">
+                      <button class="number-button button-reset button-minus" type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();"></button>
+                      <input class="search-input-number search-input" type="number" name="adults" id="search-adults" value="2" min="1"> 
+                      <button class="number-button button-reset button-plus" type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();"></button>
+                    </div>                     
+                  </li>
+                  <li class="search-option search-number">
+                    <label for="search-children">Дети:</label>
+                    <div class="number-wrapper">
+                      <button class="number-button button-reset button-minus" type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();"></button>
                       <input class="search-input-number search-input" type="number" name="children" id="search-children" value="0" min="0">                      
-                    </li>
-                  </ul> 
-                </fieldset>
+                      <button class="number-button button-reset button-plus" type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();"></button>
+                    </div> 
+                  </li>
+                </ul> 
               </form>
-              <button class="button search-button full-width">Найти</button>
+              <button class="button search-button full-width" type="submit" form="searching-form" value="Найти гостиницу">Найти</button>
             </div>
           </div>
         </div>

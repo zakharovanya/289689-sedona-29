@@ -90,6 +90,11 @@ img {
   list-style: none;
 }
 
+.button-reset {
+  border: 0;
+  background-color: transparent;
+}
+
 .full-width {
   display: block;
   margin: 0 auto;
@@ -218,6 +223,7 @@ img {
 
 .advantages-inner-item {
   flex-basis: 30%;
+  padding: 60px 0 82px;
 }
 
 .advantages-inner-item:nth-child(2n) {
@@ -238,27 +244,30 @@ img {
 }
 
 .banner {
-  display: grid;
   position: relative;
+  background-image: url(../img/background.jpg);
+  min-height: 509px;
 }
 
-.banner:after {
+.banner::before {
   content: '';
   position: absolute;
-  bottom: 0;
-  height: 57px;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/welcome.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  height: 100%;
   width: 100%;
   background-image: url(../img/shape.svg);
-}
-
-.background-banner,
-.welcome-banner {
-  grid-column: 1 / -1;
-  grid-row: 1 /-1;
-}
-
-.welcome-banner {
-  margin: auto;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .search-section {
@@ -432,18 +441,14 @@ img {
   color: var(--white-light-opacity);
 }
 
-.twitter-button,
-.facebook-button,
-.youtube-button {
+.social-button {
   position: relative;
   display: flex;
   width: 46px;
   height: 48px;
 }
 
-.twitter-button::after,
-.facebook-button::after,
-.youtube-button::after {
+.social-button::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -455,15 +460,11 @@ img {
   opacity: 1;
 } 
 
-.twitter-button:hover::after,
-.facebook-button:hover::after,
-.youtube-button:hover::after {
+.social-button:hover::after {
   opacity: 1;
 }
 
-.twitter-button:focus::after,
-.facebook-button:focus::after,
-.youtube-button:focus::after {
+.social-button:focus::after {
   opacity: 0.3;
 }
 
@@ -526,9 +527,7 @@ img {
   box-shadow: var(--block-shadow);
 }
 
-.home-icon,
-.food-icon,
-.souvenirs-icon {
+.advantages-icon {
   position: relative;
   min-height: 77px;
   margin-bottom: 28px;
@@ -570,12 +569,10 @@ img {
 }
 
 .advantages-number::before {
-  left: 0;
   margin-right: 5px;
 }
 
 .advantages-number::after {
-  right: 0;
   margin-left: 5px;
 }
 
@@ -627,13 +624,6 @@ img {
 }
 
 /* Form */
-
-.search-form fieldset {
-  padding: 0;
-  margin: 0;
-  border: none;
-  color: var(--white-color);
-}
 
 .search-list {
   display: flex;
@@ -710,6 +700,30 @@ img {
 .search-input-number[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.number-wrapper {
+  position: relative;
+}
+
+.number-button {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  padding: 0 19px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.button-minus {
+  left: 0;
+  background-image: url(../img/minus.svg);
+}
+
+.button-plus {
+  right: 0;
+  background-image: url(../img/plus.svg);
 }
 
 /* Sort */
