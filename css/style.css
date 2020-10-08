@@ -168,6 +168,7 @@ img {
 
 .main-header-logo {
   position: absolute;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -244,30 +245,28 @@ img {
 }
 
 .banner {
+  display: grid;
   position: relative;
   background-image: url(../img/background.jpg);
   min-height: 509px;
 }
 
-.banner::before {
-  content: '';
-  position: absolute;
-  z-index: 2;
-  height: 100%;
-  width: 100%;
-  background-image: url(../img/welcome.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .banner::after {
-  content: '';
+  content: "";
   position: absolute;
-  height: 100%;
+  bottom: 0;
+  left: 0;
+  height: 57px;
   width: 100%;
   background-image: url(../img/shape.svg);
   background-repeat: no-repeat;
   background-position: bottom;
+}
+
+.welcome-banner {
+  grid-column: 1 / -1;
+  grid-row: 1 /-1;
+  margin: auto;
 }
 
 .search-section {
@@ -314,9 +313,6 @@ img {
 }
 
 .hotels-description {
-  /* display: grid;
-  grid-template-rows: auto 1fr;
-  grid-template-columns: auto auto 1fr; */
   padding-left: 29px;
   flex-grow: 1;
 }
@@ -449,11 +445,12 @@ img {
 }
 
 .social-button::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   top: 50%;
+  left: 0;
   transform: translateY(-50%);
   background-repeat: no-repeat;
   background-position: center;
@@ -557,7 +554,7 @@ img {
 
 .advantages-number::before,
 .advantages-number::after {
-  content: '';
+  content: "";
   width: 6px;
   height: 1px;
   background-color: var(--dark-color);
@@ -679,6 +676,8 @@ img {
 .calendar {
   position: absolute;
   right: 9px;
+  top: 50%;
+  transform: translateY(-50%);
   background-image: url(../img/calendar.svg);
   width: 21px;
   height: 23px;
@@ -708,6 +707,8 @@ img {
 
 .number-button {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   height: 100%;
   width: auto;
   padding: 0 19px;
