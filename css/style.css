@@ -97,8 +97,8 @@ img {
   background-color: transparent;
 }
 
-.input-number-reset[type=number]::-webkit-inner-spin-button,
-.input-number-reset[type=number]::-webkit-outer-spin-button {
+.input-number-reset::-webkit-inner-spin-button,
+.input-number-reset::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -272,8 +272,6 @@ img {
 }
 
 .welcome-banner {
-  grid-column: 1 / -1;
-  grid-row: 1 /-1;
   margin: auto;
 }
 
@@ -358,29 +356,32 @@ img {
   align-items: flex-end;
 }
 
-.rating-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.rating-item:not(:last-child) {
-  margin-right: 5px;
-}
-
-.star {
-  width: 19px;
-  height: 17px;
-  cursor: pointer;
-}
-
-.inactive-star {
-  background-image: none;
-}
-
-.active-star {
+.hotel-stars {
   background-image: url(../img/star.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  background-repeat: repeat-x;
+  background-position: center right;
+  height: 26px;
+  margin: 0;
+}
+
+.hotel-stars-five {
+  width: 97px;
+}
+
+.hotel-stars-four {
+  width: 76px;
+}
+
+.hotel-stars-three {
+  width: 59px;
+}
+
+.hotel-stars-two {
+  width: 40px;
+}
+
+.hotel-stars-one {
+  width: 19px;
 }
 
 .page-footer {
@@ -735,24 +736,22 @@ img {
   width: 333px;
 }
 
-.calendar {
+.calendar-button {
   position: absolute;
   right: 9px;
   top: 50%;
   transform: translateY(-50%);
-  background-image: url(../img/calendar.svg);
-  width: 21px;
-  height: 23px;
+  padding: 0;
   z-index: 2;
   cursor: pointer;
 }
 
-.calendar:hover {
-  background-image: url(../img/calendar-hover.svg);
+.calendar:hover path {
+  fill: var(--black-color);
 }
 
-.calendar:focus {
-  background-image: url(../img/calendar-focus.svg);
+.calendar:focus path {
+  fill: var(--blue-color);
 }
 
 .search-input-number {
@@ -761,14 +760,8 @@ img {
   padding: 0;
 }
 
-.search-number + .search-number label{
+.search-number + .search-number label {
   width: 53px;
-}
-
-.search-input-number[type=number]::-webkit-inner-spin-button,
-.search-input-number[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }
 
 .number-wrapper {
@@ -780,37 +773,28 @@ img {
   top: 50%;
   transform: translateY(-50%);
   height: 100%;
-  width: auto;
-  padding: 0 19px;
-  background-repeat: no-repeat;
-  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 13px;
   cursor: pointer;
 }
 
 .button-minus {
   left: 0;
-  background-image: url(../img/minus.svg);
-}
-
-.button-minus:hover {
-  background-image: url(../img/minus-hover.svg);
-} 
-
-.button-minus:focus {
-  background-image: url(../img/minus-focus.svg);
 }
 
 .button-plus {
   right: 0;
-  background-image: url(../img/plus.svg);
 }
 
-.button-plus:hover {
-  background-image: url(../img/plus-hover.svg);
-}
+.sign:hover path, 
+.sign:hover rect {
+  fill: var(--black-color);
+} 
 
-.button-plus:focus {
-  background-image: url(../img/plus-focus.svg);
+.sign:focus path, 
+.sign:focus rect {
+  fill: var(--blue-color);
 }
 
 /* Sort */
@@ -933,6 +917,7 @@ img {
 }
 
 .filter fieldset {
+  flex-basis: 25%;
   padding: 0;
   margin: 0;
   border: none;
@@ -945,16 +930,17 @@ img {
   justify-content: center;
 }
 
-.filter legend {
+.range-wrapper {
+  padding-left: 150px;
+}
+
+.filter legend,  
+.range-caption { 
   margin-bottom: 10px;
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
   text-align: left;
-}
-
-.filter-option {
-  padding-left: 38px;
 }
 
 .filter-option:not(:last-child) {
@@ -963,54 +949,39 @@ img {
 
 .filter-option label {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
   cursor: pointer;
   user-select: none;
+  padding-left: 38px;
 }
 
-.filter-input + label::before,
-.filter-input + label::after {
-  content: "";
+.checkbox-on,
+.checkbox-off {
   position: absolute;
-  left: -38px;
   top: 0;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.filter-input + label::before,
-.filter-input-checkbox:disabled + label::after {
-  width: 23px;
-  height: 23px;
-}
-
-.filter-input + label::after,
-.filter-input-checkbox:checked:disabled + label::after {
-  width: 27px;
-  height: 23px;
-}
-
-.filter-input-checkbox + label::before {
-  background-image: url(../img/checkbox-off.svg);
-  opacity: 1;
-}
-
-.filter-input-checkbox:checked + label::before,
-.filter-input-checkbox:checked:disabled + label::before, 
-.filter-input-checkbox:disabled + label::before {
-  opacity: 0;
+  left: 0;
 } 
 
-.filter-input-checkbox:checked + label::after {
-  background-image: url(../img/checkbox-on.svg);
+.filter-input:checked + label .checkbox-on {
+  display: block;
 }
 
-.filter-input-checkbox:checked:disabled + label::after { 
-  background-image: url(../img/checkbox-on-dis.svg);
+.filter-input:checked + label .checkbox-off {
+  display: none;
 }
 
-.filter-input-checkbox:disabled + label::after { 
-  background-image: url(../img/checkbox-off-dis.svg);
+.filter-input + label .checkbox-on {
+  display: none;
+}
+
+.filter-input-checkbox:checked:disabled + label .checkbox-on path,
+.filter-input-checkbox:disabled + label .checkbox-off path {
+  fill: var(--gray-extra-dark-color);
+}
+
+.range-caption {
+  margin-top: 0;
 }
 
 .range-filter {
@@ -1046,9 +1017,6 @@ img {
   border-radius: 50%;
   box-shadow: 0 2px 0 0 var(--gray-basic-opacity);
   cursor: pointer;
-  /* background-image: url(../img/filter-button.svg);
-  background-repeat: no-repeat;
-  background-position: center; */
 }
 
 .range-controls .toggle:hover {
