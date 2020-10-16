@@ -185,8 +185,6 @@ img {
 }
 
 .site-navigation {
-  grid-column: 1 / -1;
-  grid-row: 1 / -1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -194,7 +192,7 @@ img {
 }
 
 .navigation-item {
-  flex-basis: 28%;
+  flex-basis: 25%;
   text-align: left;
   padding: 15px 0;
 }
@@ -202,11 +200,6 @@ img {
 .navigation-item:nth-of-type(4n-1),
 .navigation-item:nth-child(4n) {
   text-align: right;
-}
-
-.navigation-item:nth-of-type(4n-3),
-.navigation-item:nth-of-type(4n) {
-  flex-basis: 20%;
 }
 
 .advantages-list {
@@ -310,6 +303,7 @@ img {
   background-image: url(../img/map.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  border: 0;
 }
 
 .sorting-block {
