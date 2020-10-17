@@ -313,7 +313,7 @@ img {
 }
 
 .sorting-column {
-  margin: auto 0;
+  margin-top: 10px;
   padding-left: 46px;
 }
 
@@ -335,10 +335,6 @@ img {
 .hotels-description {
   padding-left: 29px;
   flex-grow: 1;
-}
-
-.hotels-heading {
-  grid-column: 1 / -1;
 }
 
 .hotels-text {
@@ -372,7 +368,7 @@ img {
 .hotel-stars {
   background-image: url(../img/star.svg);
   background-repeat: repeat-x;
-  background-position: center right;
+  background-position: top right;
   height: 26px;
   margin: 0;
 }
@@ -542,10 +538,11 @@ img {
   background-color: transparent;
   color: var(--white-color);
   text-transform: uppercase;
-  padding: 7px 35px;
+  padding: 8px 32px;
   display: block;
-  margin: 33px auto 0;
+  margin: 32px auto 0;
   cursor: pointer;
+  font-family: "PT Sans", "Arial", sans-serif;
 }
 
 .filter-button:hover {
@@ -822,7 +819,7 @@ img {
 
 .sorting-block {
   border-bottom: 1px solid var(--gray-border-color);
-  padding: 30px 0;
+  padding: 8px 0;
 }
 
 .sort-heading {
@@ -838,7 +835,7 @@ img {
   line-height: 18px;
   color: var(--black-color);
   display: inline-block;
-  margin-right: 40px;
+  margin-right: 38px;
 }
 
 .sort-link {
@@ -848,7 +845,7 @@ img {
   color: var(--black-light-opacity);
   border-bottom: 1px dashed var(--blue-color);
   display: inline-block;
-  margin-right: 32px;
+  margin-right: 26px;
 }
 
 .sort-link.active {
@@ -928,7 +925,7 @@ img {
   background-color: var(--black-color);
   position: relative;
   padding-top: 26px;
-  padding-bottom: 32px;
+  padding-bottom: 28px;
 }
 
 .filter {
@@ -952,20 +949,27 @@ img {
 }
 
 .range-wrapper {
-  padding-left: 150px;
+  padding-left: 210px;
 }
 
 .filter legend,  
 .range-caption { 
-  margin-bottom: 10px;
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
   text-align: left;
 }
 
+.filter legend {
+  margin-bottom: 25px;
+}
+
+.range-caption {
+  margin-bottom: 10px;
+}
+
 .filter-option:not(:last-child) {
-  margin-bottom: 23px;
+  margin-bottom: 20px;
 }
 
 .filter-option label {
@@ -1057,7 +1061,7 @@ img {
 .price-controls {
   display: flex;
   justify-content: space-between;
-  height: 36px;
+  height: 34px;
   border: 2px solid var(--white-color);
   border-radius: 2px;
 }
