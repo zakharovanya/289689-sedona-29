@@ -1,21 +1,20 @@
-const searchButton = document.querySelector(".search-form-button");
-const searchPopup = document.querySelector(".form-block");
+const searchPopup = document.querySelector('.form-block');
+const searchButton = document.querySelector('.search-form-button');
 const searchForm = searchPopup.querySelector(".search-form");
 const searchDate = searchPopup.querySelector(".search-input-date");
 const searchNumbers = searchPopup.querySelector (".search-input-number");
 
-searchButton.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  searchPopup.classList.toggle("form-show");
-  searchPopup.offsetWidth = searchPopup.offsetWidth;
-  searchPopup.classList.remove("form-error");
-
+searchButton.onclick = function() {
+  searchPopup.classList.toggle('form-show');
+  searchPopup.classList.toggle('form-hide');
   searchDate.focus();
-});
+};
 
 searchForm.addEventListener("submit", function (evt) {
   if (!searchDate.value || !searchNumbers.value) {
     evt.preventDefault();
+    searchPopup.classList.remove("form-error");
+    searchPopup.offsetWidth = searchPopup.offsetWidth;
     searchPopup.classList.add("form-error");
   } 
 });
