@@ -1,9 +1,13 @@
-const searchPopup = document.querySelector('.form-block');
-const searchButton = document.querySelector('.search-form-button');
+const searchPopup = document.querySelector(".form-block");
+const searchButton = document.querySelector(".search-form-button");
 const searchForm = searchPopup.querySelector(".search-form");
 const searchDate = searchPopup.querySelector(".search-input-date");
 const searchNumbers = searchPopup.querySelector (".search-input-number");
-const formButton = searchPopup.querySelector (".search-button")
+const formButton = searchPopup.querySelector (".search-button");
+
+window.onload = function() {
+  searchPopup.classList.add("form-hide");
+};
 
 searchButton.addEventListener("click", function (evt) {
   searchPopup.classList.toggle("form-show");
@@ -19,6 +23,8 @@ searchForm.addEventListener("submit", function (evt) {
     searchPopup.classList.add("form-error");
   } else {
     searchPopup.classList.add("form-hide");
+    searchPopup.classList.remove("form-show");
+    searchPopup.classList.remove("form-error");
   }
 });
 
