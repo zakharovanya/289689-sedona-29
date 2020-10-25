@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="hotels-body container">
     <header class="main-header">
@@ -31,7 +31,7 @@
     <main class="hotels-page">
       <section class="hotels-filter content-indent">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <form class="filter">
+        <form class="filter" method="get" action="https://echo.htmlacademy.ru" target="_blank">
           <fieldset>
             <legend>Инфраструктура:</legend>
             <ul class="list-reset">
@@ -154,7 +154,6 @@
             <a class="sort-link block-centering" href="">По типу</a>
             <a class="sort-link block-centering" href="">По рейтингу</a>
           </div>
-          <!-- взорастание/убывание -->
           <div class="sort-inner block-centering">
             <a class="sort-up" href="" aria-label="Сортировка по возрастанию">
               <svg aria-hidden="true" focusable="false" class="sort-arrow" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
