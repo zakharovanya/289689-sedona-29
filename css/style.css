@@ -1,25 +1,3 @@
-/* Fonts */
-
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('PT Sans'), 
-    local('PTSans'), 
-    url('../fonts/ptsans.woff2') format ('woff2'), 
-    url('../fonts/ptsans.woff') format ('woff');
-}
-
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('PT Sans Bold'), 
-    local('PTSans-Bold'), 
-    url('../fonts/ptsansbold.woff2') format ('woff2'), 
-    url('../fonts/ptsansbold.woff') format ('woff');
-}
-
 /* Variables */
 
 :root {
@@ -409,7 +387,7 @@ img {
 .inverse-heading {
   font-size: 21px;
   line-height: 21px;
-  width: 150px;
+  width: 155px;
   margin: auto;
   text-align: center;
   padding-bottom: 25px;
@@ -665,7 +643,7 @@ img {
 
 .search-caption {
   line-height: 24px;
-  padding-bottom: 44px;
+  padding-bottom: 45px;
 }
 
 .search-form-button {
@@ -682,6 +660,7 @@ img {
 
 .search-block {  
   margin: auto;
+  padding: 0 15px 15px;
   width: 568px;
   overflow: hidden;
 }
@@ -709,9 +688,9 @@ img {
 }
 
 .form-hide {
-  transform: translateY(-100%);
+  transform: translateY(-180%);
   z-index: -2;
-  transition: 0.6s;
+  transition: 0.85s;
 }
 
 .form-error {
